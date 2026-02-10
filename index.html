@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxtro | Premium Fashion</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Cursor -->
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">LUXTRO</a>
+            <div class="nav-links">
+                <a href="#home">Collections</a>
+                <a href="#shop">Shop</a>
+                <a href="#about">Our Story</a>
+            </div>
+            <div class="nav-actions">
+                <button class="icon-btn search-btn"><i class="ri-search-line"></i></button>
+                <button class="icon-btn cart-btn" id="cartToggle">
+                    <i class="ri-shopping-bag-line"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Canvas for 3D Background -->
+    <canvas id="hero-canvas"></canvas>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Redefining <br> <span class="text-gold">Elegance</span></h1>
+                <p class="hero-subtitle">Discover our exclusive collection of premium apparel designed for the modern connoisseur.</p>
+                <a href="#shop" class="cta-btn">Explore Collection</a>
+            </div>
+        </section>
+
+        <!-- Featured / Shop Section -->
+        <section id="shop" class="shop-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Curated Selection</h2>
+                    <p class="section-desc">Handpicked essentials for your wardrobe.</p>
+                </div>
+                
+                <!-- Filters -->
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="shirts">Shirts</button>
+                    <button class="filter-btn" data-filter="trousers">Trousers</button>
+                    <button class="filter-btn" data-filter="accessories">Accessories</button>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="product-grid" id="productGrid">
+                    <!-- Products will be injected via JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Your Bag</h3>
+            <button class="close-cart" id="closeCart"><i class="ri-close-line"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items injected here -->
+            <div class="empty-cart-msg">Your cart is empty.</div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cartTotal">Rs. 0.00</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>LUXTRO</h3>
+                <p>Elevating style since 2024.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">About</a>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Returns</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Luxtro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- App Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/scene.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
